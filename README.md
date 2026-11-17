@@ -2,6 +2,16 @@
 
 A lightweight, zero-storage, end-to-end encrypted P2P terminal chat. Connect any two computers anywhere in the world using only an ephemeral Peer ID — no central server, no accounts, no disk writes, and no port forwarding required.
 
+## Preview
+
+**Live Encrypted P2P Chat:**
+
+![tunel-chat live chat](screenshots/2-live-chat.png)
+
+**Startup & Ephemeral Peer ID:**
+
+![tunel-chat startup](screenshots/1-startup.png)
+
 ## Features
 
 - **Direct P2P Tunnel:** Uses QUIC/TCP with automatic NAT traversal (UPnP, Hole Punching, and E2E-encrypted AutoRelay fallback).
