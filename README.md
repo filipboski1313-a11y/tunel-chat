@@ -23,20 +23,19 @@ A lightweight, zero-storage, end-to-end encrypted P2P terminal chat. Connect any
 
 ## Quick Install & Run
 
+Install once, then run `tunel-chat` from anywhere in your terminal.
+
 ### Windows (PowerShell)
 
-Run this single command in PowerShell to download and launch `tunel-chat`:
-
 ```powershell
-iwr https://github.com/filipboski1313-a11y/tunel-chat/releases/latest/download/tunel-chat-windows-amd64.exe -OutFile tunel-chat.exe; .\tunel-chat.exe
+iwr https://github.com/filipboski1313-a11y/tunel-chat/releases/latest/download/tunel-chat-windows-amd64.exe -OutFile "$env:LOCALAPPDATA\Microsoft\WindowsApps\tunel-chat.exe"
+tunel-chat
 ```
 
 ### Linux (x86_64)
 
-Run this single command in your terminal:
-
 ```bash
-curl -L https://github.com/filipboski1313-a11y/tunel-chat/releases/latest/download/tunel-chat-linux-amd64 -o tunel-chat && chmod +x tunel-chat && ./tunel-chat
+sudo curl -L https://github.com/filipboski1313-a11y/tunel-chat/releases/latest/download/tunel-chat-linux-amd64 -o /usr/local/bin/tunel-chat && sudo chmod +x /usr/local/bin/tunel-chat && tunel-chat
 ```
 
 ### macOS
@@ -44,16 +43,16 @@ curl -L https://github.com/filipboski1313-a11y/tunel-chat/releases/latest/downlo
 **Apple Silicon (M1 / M2 / M3 / M4):**
 
 ```bash
-curl -L https://github.com/filipboski1313-a11y/tunel-chat/releases/latest/download/tunel-chat-macos-arm64 -o tunel-chat && chmod +x tunel-chat && ./tunel-chat
+sudo mkdir -p /usr/local/bin && sudo curl -L https://github.com/filipboski1313-a11y/tunel-chat/releases/latest/download/tunel-chat-macos-arm64 -o /usr/local/bin/tunel-chat && sudo chmod +x /usr/local/bin/tunel-chat && tunel-chat
 ```
 
 **Intel Mac:**
 
 ```bash
-curl -L https://github.com/filipboski1313-a11y/tunel-chat/releases/latest/download/tunel-chat-macos-amd64 -o tunel-chat && chmod +x tunel-chat && ./tunel-chat
+sudo mkdir -p /usr/local/bin && sudo curl -L https://github.com/filipboski1313-a11y/tunel-chat/releases/latest/download/tunel-chat-macos-amd64 -o /usr/local/bin/tunel-chat && sudo chmod +x /usr/local/bin/tunel-chat && tunel-chat
 ```
 
-*(If macOS blocks the binary on first run, run `xattr -d com.apple.quarantine ./tunel-chat` once.)*
+*(If macOS blocks the binary on first run, run `sudo xattr -d com.apple.quarantine /usr/local/bin/tunel-chat` once.)*
 
 ---
 
